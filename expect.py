@@ -9,6 +9,4 @@ expected_age = st.number_input("Enter the age you are expecting to live for:", m
 # Display the adjusted age and year if expected_age has been entered
 if expected_age:
     adjusted_age = expected_age - 7
-    current_year = datetime.now().year
-    expected_year = current_year + adjusted_age
     st.write(f"NO, you will live {adjusted_age} years.")

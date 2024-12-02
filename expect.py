@@ -8,9 +8,9 @@ expected_age = st.number_input(
     min_value=40, max_value=100, step=1
 )
 
-# Calculate and display only if the expected_age is within the valid range
-if expected_age:
-    adjusted_age = expected_age - 7
+# Display content only after the user enters a valid age
+if expected_age > 0:  # Ensures the user has actively entered a value
+    adjusted_age = expected_age - 5
     
     # Display the paragraph with the year in larger size
     st.markdown(
@@ -22,3 +22,5 @@ if expected_age:
         """,
         unsafe_allow_html=True
     )
+else:
+    st.write("Enter your expected age to see the results.")

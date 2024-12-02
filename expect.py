@@ -9,8 +9,8 @@ expected_age = st.number_input(
 )
 
 # Calculate only if the expected_age is at least 7 to avoid negative results
-if expected_age >= 7:
-    adjusted_age = expected_age - 7
+if expected_age >= 6:
+    adjusted_age = expected_age - 5
     
     # Display the paragraph with the year in larger size
     st.markdown(
@@ -23,4 +23,4 @@ if expected_age >= 7:
         unsafe_allow_html=True
     )
 else:
-    st.write("Please enter an age of at least 7 to proceed with the calculation.")
+    st.write("Please enter an age of at least 6 to proceed with the calculation.")

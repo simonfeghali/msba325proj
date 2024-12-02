@@ -5,11 +5,12 @@ st.title("Life Expectancy Predictor")
 # Prompt the user to enter their expected age
 expected_age = st.number_input(
     "How long do you expect to live? Enter your guess (between 40 and 100):",
-    min_value=40, max_value=100, step=1
+    min_value=40, max_value=100, step=1,
+    value=None  # Ensure there's no default value
 )
 
-# Display content only after the user enters a valid age
-if expected_age > 0:  # Ensures the user has actively entered a value
+# Show content only after the user enters a number
+if expected_age is not None:
     adjusted_age = expected_age - 5
     
     # Display the paragraph with the year in larger size
@@ -22,5 +23,3 @@ if expected_age > 0:  # Ensures the user has actively entered a value
         """,
         unsafe_allow_html=True
     )
-else:
-    st.write("Enter your expected age to see the results.")
